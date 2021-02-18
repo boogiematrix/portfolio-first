@@ -237,10 +237,28 @@ header img:hover {
  }
 
  .card {
+     display: flex;
+     flex-flow: row nowrap;
+     justify-content: space-between;
+     align-items: center;
      width: 47%;
      height: 220px;
      background-color: var(--projectsaccent);
      margin: 10px;
+     overflow: hidden;
+     position: relative;
+ }
+
+ .card .img {
+     height: 150px;
+     width: auto;
+     position: absolute;
+     right: 0px;
+     top: -10%;
+ }
+
+ .card img {
+     height: 300px;
  }
 
  @media screen and (max-width: 842px){
@@ -263,13 +281,31 @@ header img:hover {
      transition: box-shadow 1s;
  }
 
- article h3 {
+figcaption {
+    background-color: var(--compliment);
+    z-index: 2;
+    margin: 3%;
+    padding: 5%;
+    border-radius: 5%;
+}
+
+ article h3,
+ .card h4 {
      display: block;
      margin: 0 auto;
      font-style: italic;
      font-family: 'Roboto', serif;
      font-size: 16px;
      color: rgb(0, 37, 105);
+ }
+
+ .card h5 {
+    display: block;
+    margin: 0 auto;
+    font-style: italic;
+    font-family: 'Roboto', serif;
+    font-size: 12px;
+    color: rgb(0, 37, 105);
  }
 
  .first-project {
