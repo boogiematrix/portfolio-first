@@ -1,0 +1,308 @@
+:root{
+    --primary:  rgb(3, 78, 218);
+    --primaryaccent: rgb(168, 191, 253);
+    --compliment: rgb(255, 145, 187);
+    --complimentaccent: rgb(255, 191, 253);
+    --mute: tan;
+    --projects: #43bc6b;
+    --projectsaccent: #85ffae;
+    --resume: #ffe867;
+
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 16px;
+}
+
+a, 
+a:active{
+    text-decoration: none;
+}
+
+/*header*/
+
+header {
+    width: 100%;
+    height: 700px;
+    background-image: linear-gradient(to top, var(--primary), var(--primary), var(--compliment));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "nav  nav"
+                         "h1  img"
+                         "h2 h2";
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 3fr 2fr;
+    border-bottom: 60px solid var(--mute);
+    row-gap: 10px;
+    justify-content: center;
+}
+
+header nav {
+    grid-area: nav;
+    border-bottom: 10px solid var(--primaryaccent);
+    background-color: var(--compliment);
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+nav span {
+    width: 10%;
+    align-self: center;
+    margin-left: 20px;
+    font-size: 250%;
+    font-family: 'Roboto', serif;
+    font-style: italic;
+    background: linear-gradient(90deg, var(--compliment),  var(--compliment) 50%, 
+        var(--complimentaccent)50%, var(--complimentaccent)70%, var(--compliment)70%, 
+        var(--compliment)75%, var(--complimentaccent)75%, var(--complimentaccent)85%, 
+        var(--compliment)85%, var(--compliment)90%, var(--complimentaccent)90%, 
+        var(--complimentaccent));
+    color: rgb(66, 99, 67);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Bodoni Moda', serif;
+}
+
+li {
+    display: inline;
+    margin: 0 auto;
+    font-style: italic;
+    color: var(--primary);
+    padding: 2px;
+    box-shadow: 0px 0px rgb(209, 209, 187);
+    transition: box-shadow 1s;
+}
+
+li:hover {
+    box-shadow: 20px 0px var(--compliment);
+}
+
+header h1 {
+    display: block;
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    -webkit-font-smoothing: antialiased;
+    font-size: 110px;
+    text-transform:lowercase;
+    background-clip:text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: url('../images/gold-shiny-foil-texture-background-pattern-macro-photo-106169757.jpg');
+    margin: 0 0 0 50px;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.portfolio {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 90px;
+    font-style: italic;
+    color: var(--compliment);
+    margin: -80px auto 0 auto;
+    grid-area: h2;
+    z-index: 5;
+}
+
+.portfolio h2 {
+    margin: 0;
+}
+
+.name {
+    grid-area: h1;
+}
+
+.left {
+    display: block;
+}
+
+.right {
+    margin-left: 200px;
+    display: block;
+}
+
+header img {
+    border-radius: 40%;
+    grid-area: img;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 8px solid var(--compliment);
+    box-shadow: 0px 0px black;
+    transition: box-shadow 1s;
+}
+
+header img:hover {
+    box-shadow: 0px 20px var(--primary);
+}
+
+@media screen and (max-width: 1024px) {
+    .right{
+        margin: 0 auto;
+        }
+    header h1 {
+        font-size: 120px;
+    }
+ }
+
+ @media screen and (max-width: 620px) {
+    header {
+        grid-template-areas: "nav"
+                             "img"
+                             "h1"
+                             "h2";
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+    } 
+    
+    header h1 {
+         font-size: 50px;
+         margin: 0 auto;
+     }
+
+     .name {
+         margin: 0 0 0 20px;
+     }
+ }
+
+ @media screen and (max-width: 438px){
+    li {
+        flex: 0 0 117px;
+    }
+
+     .portfolio {
+         font-size: 60px;
+     }
+ }
+
+ /*main*/
+
+ .marble {
+     background-image: url(../images/896718.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     overflow: hidden;
+     width: 80%;
+     height: 100px;
+     position: relative;
+     bottom: 50px;
+     margin: 0 auto;
+ }
+
+ section {
+    margin: -30px auto 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+ }
+
+ section h2 {
+    font-family: 'Bodoni moda', serif;
+    font-size: 90px;
+    font-style: italic;
+    color: rgb(129, 162, 255);
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    bottom: 30px;
+ }
+
+ 
+
+ article {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-between;
+     align-items: center;
+     margin: 0 auto 80px;
+     width: 80%;
+     height: auto;
+ }
+
+ .card {
+     width: 47%;
+     height: 220px;
+     background-color: var(--projectsaccent);
+     margin: 10px;
+ }
+
+ @media screen and (max-width: 842px){
+     .card{
+         width: 100%;
+     }
+ }
+
+ .first-project div {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 150px;
+     height: 100px;
+     background-color: var(--compliment);
+     border-radius: 50%;
+     position: relative;
+     margin: 5px;
+     box-shadow: 0px 0px rgb(209, 209, 187);
+     transition: box-shadow 1s;
+ }
+
+ article h3 {
+     display: block;
+     margin: 0 auto;
+     font-style: italic;
+     font-family: 'Roboto', serif;
+     font-size: 16px;
+     color: rgb(0, 37, 105);
+ }
+
+ .first-project {
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    background-image: url(../images/01-html-css-git-homework-demo\ copy.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-radius: 10px;
+ }
+
+ .first-project a div:hover{
+    box-shadow: 20px 0px rgb(209, 209, 187);
+    
+ }
+
+ #aboutme {
+     background-color: var(--compliment);
+ }
+
+ #projects {
+     background-color: var(--projects);
+ }
+
+ #resume {
+     background-color: var(--resume);
+ }
+
+ footer {
+     background-color: var(--primary);
+ }
