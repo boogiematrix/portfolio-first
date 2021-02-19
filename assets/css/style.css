@@ -191,9 +191,13 @@ header img:hover {
 }
 
 @media screen and (max-width: 494px){
+    header nav ul {
+        width: 60%;
+    }
+    
     header a {
-        flex: 0 0 117px;
-        margin: 10px;
+        flex: 0 0 170px;
+        margin: 15px;
     }
 
     .design {
