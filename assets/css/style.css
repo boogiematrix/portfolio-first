@@ -41,12 +41,15 @@ h2 {
 }
 
 h3,
-h4,
-h5{
+h4{
     display: block;
     margin: 0 auto;
     font-size: 16px;
     color: rgb(0, 37, 105);
+}
+
+h4 {
+    font-size: 12px;
 }
 
 /*********
@@ -55,7 +58,7 @@ h5{
 
 header {
     width: 100%;
-    height: 700px;
+    height: 750px;
     background-image: linear-gradient(to top, var(--primary), var(--primary), var(--compliment));
     background-size: cover;
     background-repeat: no-repeat;
@@ -109,6 +112,8 @@ ul {
 header li{
     display: inline;
     font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
     color: var(--primary);
     box-shadow: 0px 0px rgb(209, 209, 187);
     transition: box-shadow 1s;
@@ -133,6 +138,7 @@ header h1 {
 header img {
     grid-area: img;
     max-width: 100%;
+    max-height: 300px;
     margin: 0 auto;
     border: 8px solid var(--compliment);
     box-shadow: 0px 0px black;
@@ -270,7 +276,7 @@ article > a {
     width: 100%;
     height: 500px;
     margin: 0 auto;
-    background-image: url(../images/01-html-css-git-homework-demo\ copy.png);
+    background-image: url(../images/pokemon-project-screetnshot.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -282,12 +288,14 @@ article > a {
  
 .first-project div {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 100px;
+    width: 200px;
+    height: 150px;
     background-color: var(--compliment);
-    border-radius: 50%;
+    border: 3px solid black;
+    border-radius: 10%;
     position: relative;
     margin: 5px;
     box-shadow: 0px 0px rgb(209, 209, 187);
@@ -296,6 +304,10 @@ article > a {
 
 .first-project:hover div{
     box-shadow: 20px 0px rgb(209, 209, 187);
+}
+
+.first-project div p{
+    font-size: 12px;
 }
 
 .noMargin {
@@ -314,6 +326,7 @@ article > a {
     margin: 10px;
     overflow: hidden;
     position: relative;
+    border-radius: 5px;
 }
 
 .card .img {
@@ -336,6 +349,7 @@ article > a {
 
 figcaption {
     background-color: var(--compliment);
+    border: 2px solid black;
     z-index: 2;
     margin: 3%;
     padding: 5%;
@@ -348,9 +362,6 @@ figcaption {
     box-shadow: 3px 3px var(--projects);
 }
 
-.card h5 {
-    font-size: 12px;
-}
 
 .resume div {
     font-weight: 700;
