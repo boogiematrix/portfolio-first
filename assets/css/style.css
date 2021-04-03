@@ -113,8 +113,8 @@ header li{
     display: inline;
     font-style: italic;
     font-weight: bold;
-    font-size: 18px;
-    color: var(--primary);
+    font-size: 20px;
+    color: rgb(0, 37, 105);
     box-shadow: 0px 0px rgb(209, 209, 187);
     transition: box-shadow 1s;
 }
@@ -258,11 +258,34 @@ article {
     height: auto;
 }
 
-.about div {
-    background-color: var(--primaryaccent);
+.about {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#summary {
+    color: black;
+    font-weight: bold;
     margin: 0 auto 40px;
-    border-radius: 5%;
-    width: 90%;
+    border-radius: 2%;
+    width: 70%;
+}
+
+#skills {
+    margin: 0 auto 40px;
+    width: 30%;
+}
+
+#skills ul {
+    flex-flow: column wrap;
+    font-size: 20px;
+}
+
+.about p {
+    font-size: 30px;
+    text-align: left;
 }
 
 article > a {
@@ -370,15 +393,15 @@ figcaption {
 }
 
 #aboutme {
-    background-color: var(--compliment);
+    background-color: var(--resume);
 }
 
 #projects {
     background-color: var(--projects);
 }
 
- #resume {
-    background-color: var(--resume);
+#resume {
+    background-color: var(--compliment);
 }
 
 /*********
