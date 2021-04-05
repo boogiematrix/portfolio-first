@@ -267,7 +267,6 @@ article {
 
 #summary {
     color: black;
-    font-weight: bold;
     margin: 0 auto 40px;
     border-radius: 2%;
     width: 70%;
@@ -284,12 +283,27 @@ article {
 }
 
 .about p {
-    font-size: 30px;
     text-align: left;
+    font-size: 20px;
+}
+
+.about p span{
+    font-size: 40px;
+    font-weight: bold;
 }
 
 article > a {
     width: 100%;
+}
+
+@media screen and (max-width: 494px) {
+    .about {
+        flex-flow: column wrap;
+    }
+
+    .about p span {
+        font-size: 30px;
+    }
 }
 
 /*This is the feature of the projects section*/
