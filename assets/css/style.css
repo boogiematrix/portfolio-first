@@ -321,6 +321,7 @@ article > a {
     justify-content: flex-start;
     align-items: flex-end;
     border-radius: 10px;
+    box-shadow: 3px 3px 10px;
 }
  
 .first-project div {
@@ -364,6 +365,7 @@ article > a {
     overflow: hidden;
     position: relative;
     border-radius: 5px;
+    box-shadow: 3px 3px 10px;
 }
 
 .card .img {
